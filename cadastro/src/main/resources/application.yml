@@ -1,0 +1,23 @@
+quarkus:
+  http:
+    port: 8081
+
+  datasource:
+    password: cadastro
+    username: cadastro
+
+    jdbc:
+      driver: io.opentracing.contrib.jdbc.TracingDriver
+      url: jdbc:tracing:postgresql://localhost:5432/postgres
+    db-kind: postgresql
+
+  hibernate-orm:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    database:
+      generation: update
+
+mp:
+  jwt:
+    verify:
+      issuer: 'http://localhost:8080/auth/realms/ifood'
+      publickey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAngrumIdJK9KCKmYvkDw9/lvbPEvCIkXvHnSitSc05YyLKINBxxQFetnxxC5L/oBfnThwWWkuSNByNyBNdZFUup73v6PTcDwc9TVBm4kmFnfu71LjQ6AxzlBiZkAQKaTry8A+YK+WmEogYdh+44VEU4b2pda6Sb9aqfwrIgUMvUpy5+9CXr9vGVgV3bAzAfrHBWL+ASrfCv5a5yGnQmUsJd0cMCs2z/nEQYXaJ9IuNHg5bxiK0tMIAofaaQwGvg0ig9pDeiungRYEU7zh+Nz8MYIZ2lOKE+B1PGhJc2IIJ+9Tjk6uo+G9JyKIeCrYgmJPGIGL7nrUQfKaJcXggHi86wIDAQAB
