@@ -93,11 +93,6 @@
       <artifactId>quarkus-smallrye-jwt</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-config-yaml</artifactId>
-    </dependency>
-
   </dependencies>
 
   <build>

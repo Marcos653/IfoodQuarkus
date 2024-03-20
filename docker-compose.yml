@@ -14,7 +14,7 @@ services:
     container_name: keycloak_ifood
     image: quay.io/keycloak/keycloak:9.0.2
     ports:
-      - "8080:8080"
+      - "8180:8180"
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_PASSWORD: admin
